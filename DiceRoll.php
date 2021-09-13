@@ -1,1 +1,1 @@
-<?php include_once("DiceRoll.html"); ?>
+<?php header("Location : /DiceRoll.html"); ?>
