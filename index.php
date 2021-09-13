@@ -1,1 +1,1 @@
-<?php header("Location : /DiceRoll.html"); ?>
+<?php header("Location : /index.html"); ?>
