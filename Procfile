@@ -1,1 +1,1 @@
-web:heroku-php-apache2 DiceRoll/
+web: heroku-php-apache2 DiceRoll/
