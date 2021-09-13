@@ -1,0 +1,159 @@
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(
+        rgba(36, 36, 36, 0.9),
+        rgba(244, 228, 9, 0.2),
+        rgba(36, 36, 36, 0.8),
+        rgba(32, 32, 32, 0.9)),
+        url(images/desk.jpg);
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;   
+}
+
+#wrapper {
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    display: flex;
+    background-color: white;
+    box-shadow: 0px 10px 10px rgba(36, 36, 36, 0.3);
+}
+
+img {
+  width: 125px;
+  height: 125px;
+}
+
+.hold, .roll, .new {
+  width: 200px;
+}
+
+.buttons {
+  top: 550px;
+}
+
+button {
+    color: #17C3B2;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    font-weight: 600;
+}
+
+
+#player-0-side, #player-1-side {
+  height: 100%;
+  padding: 100px;
+}
+
+#player-0, #player-1 {
+  color:  #17C3B2;
+}
+
+
+.current {
+  background-color: #eb4D4D;
+  color: white;
+  margin: 0 auto;
+  padding: 12px;
+  width: 30%;
+}
+
+.current-label {
+  font-size: 12px;
+}
+
+.total-score {
+  color: #eb4D4D;
+}
+.active {
+    background-color: #54494b11;
+}
+
+.active #player-0, .active #player-1 {
+    color: #13A496;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px #1D6A86;
+}
+
+button:hover i {
+    margin-right: 10px;
+}
+
+i {
+    color: #F17E7E;
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 25px;
+    line-height: -1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;  
+}
+
+.roll:hover .fa-dice-one {
+    animation: 2s  0ms infinite rotateItem;
+}
+
+.new:hover .fa-plus-circle {
+    animation: 0.8s ease-out 0.2ms alternate infinite newGame;
+}
+
+.hold:hover .fa-arrow-circle-down {
+    animation: 0.8s ease-out 0.2ms infinite hold;
+}
+
+@keyframes rotateItem {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes newGame {
+    0% {
+        transform: translateY(0px) scale(1.15, 0.85);
+    }
+    50% {
+        transform: translateY(-12px) scale(1, 1);
+    }
+    100% {
+        transform: translateY(0px) scale(1.15, 0.85);
+    }
+}
+
+@keyframes hold {
+    0% {
+        transform: scale(1.5, 0.5);
+    }
+    50% {
+        transform: scale(1, 1);
+    }
+    100% {
+        transform: scale(1.5, 0.5);
+    }
+}
